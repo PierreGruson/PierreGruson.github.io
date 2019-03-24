@@ -8,6 +8,10 @@ body {
     text-align: center;
 }
 
+#navigation {
+
+}
+
 #navigation ul {
     list-style-type: none;
     margin: 0;
@@ -26,6 +30,7 @@ body {
     text-align: center;
     padding: 15px 20px;
     text-decoration: none;
+
 }
 
 #navigation li a:hover {
