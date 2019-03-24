@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -32,8 +32,21 @@ body{
     background-color: #3949AB;
 }
 
-#presentation {
+#presentation, #reading, #games, #basketball, #players {
+    border-bottom: black 1px solid;
+}
+#reading {
+
+}
+
+#games {
+
+}
+
+#basketball, #players {
     padding: 15px;
+    color: white;
+    background-color: #BF360C;
 }
 
 #tasks, #colorText, #event {
@@ -49,24 +62,32 @@ body{
     padding: 15px;
 }
 
+ol#playerList {
+    margin: auto;
+    width: 7%;
+    text-align: left;
+}
+
 button, input {
     font-family: Lato, sans-serif;
     color: #455A64;
 }
+
 #list {
 
 }
+
 #list li {
     list-style-position: inside;
 }
 
-ol#list {
+ul#list {
     margin: auto;
     width: 20%;
     text-align: left;
 }
 
-input, button, check {
+input, button {
     border-radius: 7px;
     font-weight: bold;
 }

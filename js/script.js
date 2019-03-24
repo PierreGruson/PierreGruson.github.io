@@ -32,8 +32,7 @@ function addItem() {
     let item = document.getElementById("itemName").value;
     let isImportant = document.getElementById("isImportant").valueOf();
     let groceries = document.getElementById("groceries").valueOf();
-    if (/[^\s][a-zA-Z0-9\s]+$/.test(item))
-    {
+    if (/[^\s][a-zA-Z0-9\s]+$/.test(item)) {
         let addItem = document.createElement("li");
         addItem.appendChild(document.createTextNode(item));
         if (isImportant.checked)
@@ -41,9 +40,8 @@ function addItem() {
         if (groceries.checked)
             addItem.style["text-decoration"] = "underline";
         document.getElementById("list").appendChild(addItem);
-        document.getElementById("itemRemove").max = (parseInt(document.getElementById('itemRemove').getAttribute("max")) +1);
-    }
-    else
+        document.getElementById("itemRemove").max = (parseInt(document.getElementById('itemRemove').getAttribute("max")) + 1);
+    } else
         window.alert("The format is incorrect !");
     document.getElementById("itemName").value = '';
 }
@@ -52,17 +50,13 @@ function addItem() {
 function removeItem() {
     let index = document.getElementById("itemRemove").value;
     let length = document.getElementById("list").childElementCount;
-    if (/^[0-9]+$/.test(index))
-    {
-        if (index <= length && index > 0)
-        {
-            let removeItem = document.getElementById("list").getElementsByTagName("li")[index-1];
+    if (/^[0-9]+$/.test(index)) {
+        if (index <= length && index > 0) {
+            let removeItem = document.getElementById("list").getElementsByTagName("li")[index - 1];
             document.getElementById("list").removeChild(removeItem);
-            document.getElementById("itemRemove").max = (parseInt(document.getElementById('itemRemove').getAttribute("max")) -1);
-        }
-        else
+            document.getElementById("itemRemove").max = (parseInt(document.getElementById('itemRemove').getAttribute("max")) - 1);
+        } else
             window.alert("The index is incorrect !")
-    }
-    else
+    } else
         window.alert("The index should be a number !");
 }
