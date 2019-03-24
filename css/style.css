@@ -1,0 +1,66 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Lato, sans-serif;
+    background-color: #F5F5F5;
+    color: #455A64;
+    text-align: center;
+}
+
+#navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1A237E;
+}
+
+#navigation li {
+    float: left;
+}
+
+#navigation li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 20px;
+    text-decoration: none;
+}
+
+#navigation li a:hover {
+    background-color: #3949AB;
+}
+
+#presentation {
+    padding: 15px;
+}
+
+#tasks, #colorText, #event {
+    padding: 15px;
+    background-color: #F5F5F5;
+    color: #455A64;
+    border-bottom: 1px #455A64 solid;
+}
+
+#shopping {
+    padding: 15px;
+    background-color: #F5F5F5;
+    color: #455A64;
+
+}
+
+button, input {
+    font-family: Lato, sans-serif;
+    color: #455A64;
+}
+#list {
+
+}
+#list li {
+    list-style-position: inside;
+}
+
+#list ul {
+
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Shopping</title>
+</head>
+<body>
+<nav id="navigation">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tasks.html">Tasks</a></li>
+        <li><a href="shopping.html">Shopping</a></li>
+        <li><a href="https://www.nba.com">NBA Website</a></li>
+    </ul>
+</nav>
+
+<div id="shopping">
+
+    <form onsubmit="return false">
+        <label>
+            <input type="checkbox" id="isImportant" name="isImportant">
+            Is important
+        </label><br>
+        <label>
+            <input type="checkbox" id="groceries" name="groceries">
+            Can be bought in groceries
+        </label><br><br>
+        <label>Item to buy
+            <input type="text" placeholder="Item name" name="itemName" id="itemName">
+        </label>
+        <button onclick="addItem()">Add</button>
+        <label> / Item to remove
+            <input type="text" style="width:50px;" placeholder="Index" name="itemRemove" id="itemRemove">
+        </label>
+        <button onclick="removeItem()">Remove</button>
+    </form>
+
+    <p>Shopping list :</p>
+    <ul id="list">
+    </ul>
+</div>
+
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
