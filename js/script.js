@@ -5,7 +5,7 @@ function init() {
     flower.src = "img/flower2.png";
     document.getElementById("new_element").appendChild(flower);
 
-    //Tas5
+    //Task5
     let spans = document.getElementById("rainbow").getElementsByTagName("span");
     let colors = ["red", "orange", "yellow", "green", "blue", "purple", "pink"];
 
@@ -23,7 +23,6 @@ function init() {
                 event.target.src = "img/flower1.png";
         }
     };
-
     document.getElementById("event").addEventListener("mouseover", changeFlower);
 }
 
@@ -33,16 +32,19 @@ function addItem() {
     let item = document.getElementById("itemName").value;
     let isImportant = document.getElementById("isImportant").valueOf();
     let groceries = document.getElementById("groceries").valueOf();
-    if (/^[a-zA-Z]+$/.test(item)) //If the item is not alphas it won't be add to the list
+    if (/[^\s][a-zA-Z0-9\s]+$/.test(item)) //If the item is not alphas it won't be add to the list
     {
         let addItem = document.createElement("li");
-        addItem.appendChild(document.createTextNode(item + "\t["+ (document.getElementById("list").childElementCount + 1) +"]"));
+        addItem.appendChild(document.createTextNode(item));
         if (isImportant.checked)
             addItem.style.color = "#B71C1C";
         if (groceries.checked)
             addItem.style["text-decoration"] = "underline";
         document.getElementById("list").appendChild(addItem);
+        document.getElementById("itemRemove").max = (parseInt(document.getElementById('itemRemove').getAttribute("max")) +1);
     }
+    else
+        window.alert("PAS UN CARACTERE");
     document.getElementById("itemName").value = '';
 }
 
@@ -50,10 +52,16 @@ function addItem() {
 function removeItem() {
     let index = document.getElementById("itemRemove").value;
     let length = document.getElementById("list").childElementCount;
-    if (index <= length && index > 0)
+    if (/^[0-9]+$/.test(index))
     {
-        let removeItem = document.getElementById("list").getElementsByTagName("li")[index-1];
-        document.getElementById("list").removeChild(removeItem);
+        if (index <= length && index > 0)
+        {
+            let removeItem = document.getElementById("list").getElementsByTagName("li")[index-1];
+            document.getElementById("list").removeChild(removeItem);
+        }
+        else
+            window.alert("INDEX PAS BON")
     }
-
+    else
+        window.alert("PAS UN INDEX");
 }
