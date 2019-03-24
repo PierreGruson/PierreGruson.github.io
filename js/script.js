@@ -44,7 +44,7 @@ function addItem() {
         document.getElementById("itemRemove").max = (parseInt(document.getElementById('itemRemove').getAttribute("max")) +1);
     }
     else
-        window.alert("PAS UN CARACTERE");
+        window.alert("The format is incorrect !");
     document.getElementById("itemName").value = '';
 }
 
@@ -61,8 +61,8 @@ function removeItem() {
             document.getElementById("itemRemove").max = (parseInt(document.getElementById('itemRemove').getAttribute("max")) -1);
         }
         else
-            window.alert("INDEX PAS BON")
+            window.alert("The index is incorrect !")
     }
     else
-        window.alert("PAS UN INDEX");
+        window.alert("The index should be a number !");
 }
