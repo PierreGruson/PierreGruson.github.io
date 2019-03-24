@@ -32,7 +32,7 @@ function addItem() {
     let item = document.getElementById("itemName").value;
     let isImportant = document.getElementById("isImportant").valueOf();
     let groceries = document.getElementById("groceries").valueOf();
-    if (/[^\s][a-zA-Z0-9\s]+$/.test(item)) //If the item is not alphas it won't be add to the list
+    if (/[^\s][a-zA-Z0-9\s]+$/.test(item))
     {
         let addItem = document.createElement("li");
         addItem.appendChild(document.createTextNode(item));
@@ -58,6 +58,7 @@ function removeItem() {
         {
             let removeItem = document.getElementById("list").getElementsByTagName("li")[index-1];
             document.getElementById("list").removeChild(removeItem);
+            document.getElementById("itemRemove").max = (parseInt(document.getElementById('itemRemove').getAttribute("max")) -1);
         }
         else
             window.alert("INDEX PAS BON")

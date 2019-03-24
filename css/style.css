@@ -44,10 +44,9 @@ body{
 }
 
 #shopping {
-    padding: 15px;
     background-color: #F5F5F5;
     color: #455A64;
-
+    padding: 15px;
 }
 
 button, input {
@@ -61,5 +60,13 @@ button, input {
     list-style-position: inside;
 }
 
-#list ul {
+ol#list {
+    margin: auto;
+    width: 20%;
+    text-align: left;
+}
+
+input, button, check {
+    border-radius: 7px;
+    font-weight: bold;
 }
