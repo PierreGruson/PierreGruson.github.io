@@ -8,10 +8,6 @@ body {
     text-align: center;
 }
 
-#navigation {
-
-}
-
 #navigation ul {
     list-style-type: none;
     margin: 0;
@@ -39,13 +35,6 @@ body {
 
 #presentation, #reading, #games, #basketball, #players {
     border-bottom: black 1px solid;
-}
-#reading {
-
-}
-
-#games {
-
 }
 
 #basketball, #players {
@@ -78,15 +67,11 @@ button, input {
     color: #455A64;
 }
 
-#list {
-
-}
-
 #list li {
     list-style-position: inside;
 }
 
-ul#list {
+#list ul {
     margin: auto;
     width: 20%;
     text-align: left;
